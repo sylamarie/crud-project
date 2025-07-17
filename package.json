@@ -1,0 +1,19 @@
+{
+  "name": "crud-project",
+  "version": "1.0.0",
+  "description": "My Crud Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sylamarie/crud-project.git"
+  },
+  "author": "Syla Marie Garzon Cumuyog",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sylamarie/crud-project/issues"
+  },
+  "homepage": "https://github.com/sylamarie/crud-project#readme"
+}
