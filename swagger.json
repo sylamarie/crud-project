@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Employee Task Management System API",
-    "description": "API documentation for managing employees and tasks in a CRUD project.",
+    "description": "Welcome to the Employee Task Management System! \n\nUse this API to manage employees and tasks. Explore the endpoints below.",
     "version": "1.0.0"
   },
   "host": "crud-project-pczf.onrender.com",
@@ -12,19 +12,6 @@
     "https"
   ],
   "paths": {
-    "/": {
-      "get": {
-        "tags": [
-          "Welcome to the Employee Task Management System!"
-        ],
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/employees/": {
       "get": {
         "tags": [
