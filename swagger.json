@@ -8,8 +8,8 @@
   "host": "crud-project-pczf.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
-    "https"
+    "https",
+    "http"
   ],
   "paths": {
     "/employees/": {
@@ -67,6 +67,14 @@
         "responses": {
           "204": {
             "description": "No Content"
+          },
+          "400": {
+            "description": "Missing required field",
+            "examples": {
+              "application/json": {
+                "error": "Missing required field: <field_name>"
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -143,6 +151,14 @@
         "responses": {
           "204": {
             "description": "No Content"
+          },
+          "400": {
+            "description": "Missing required field",
+            "examples": {
+              "application/json": {
+                "error": "Missing required field: <field_name>"
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -228,6 +244,14 @@
           "204": {
             "description": "No Content"
           },
+          "400": {
+            "description": "Missing required field",
+            "examples": {
+              "application/json": {
+                "error": "Missing required field: <field_name>"
+              }
+            }
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -303,6 +327,14 @@
         "responses": {
           "204": {
             "description": "No Content"
+          },
+          "400": {
+            "description": "Missing required field",
+            "examples": {
+              "application/json": {
+                "error": "Missing required field: <field_name>"
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
