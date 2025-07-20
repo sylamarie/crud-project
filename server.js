@@ -19,9 +19,22 @@ app.use((req, res, next) => {
 });
 app.use('/', require('./routes')); // existing routes
 
-// Add this line to mount the Swagger docs
-app.use('/', require('./routes/swagger')); // Mounts /api-docs endpoint
+// Add Swagger documentation route
+app.use('/api-docs', require('./routes/swagger'));
 
+// 404 handler for undefined routes
+app.use((req, res) => {
+  res.status(404).json({ error: 'Route not found' });
+});
+
+// Global error handling middleware
+app.use((err, req, res, next) => {
+  console.error('Global error handler:', err);
+  res.status(500).json({ 
+    error: 'Internal server error',
+    message: process.env.NODE_ENV === 'development' ? err.message : 'Something went wrong'
+  });
+});
 
 mongodb.initDb((err) => {
     if (err) {
@@ -32,5 +45,3 @@ mongodb.initDb((err) => {
         });
     }
 });
-
-app.listen(port, () => {console.log(`Running on port ${port}`)});

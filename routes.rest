@@ -21,6 +21,15 @@ content-type: application/json
   "phone": "+639123456789"
 }
 
+### Test 400 validation - Missing required fields
+POST http://localhost:3000/employees HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Test User",
+  "email": "invalid-email"
+}
+
 ### PUT employee
 PUT http://localhost:3000/employees/6879577851a314d38f854c5c HTTP/1.1
 content-type: application/json
@@ -63,6 +72,14 @@ content-type: application/json
     "createdAt": "2025-07-16T09:00:00Z",
     "updatedAt": "2025-07-16T12:30:00Z",
     "remarks": "Ask mentor for review before merging to main"
+}
+
+### Test 400 validation - Missing required fields for task
+POST http://localhost:3000/tasks HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Test Task"
 }
 
 ### Update task
